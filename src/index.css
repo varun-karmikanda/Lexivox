@@ -7,3 +7,54 @@
 h1, h2, h3, .bold {
   font-family: 'Poppins',sans-serif;
 }
+
+.pinkShadow {
+  box-shadow: 3px 3px 0 0 #fbcfe8;
+  border: 1px solid #fbcfe8;
+  border-radius: 0.1rem;
+  transition-duration: 200ms;
+}
+
+.pinkShadow:hover{
+  transform: translate(-3px,-3px);
+  box-shadow: 7px 7px 0 0 #f9a8d4;
+  border: 1px solid #f9a8d4;
+}
+
+@keyframes color-fade {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+:root {
+  --gradient-fade: linear-gradient(
+    to right,
+    #f9a8d4 0%,
+    #db2777 25%,
+    #be185d 50%,
+    #db2777 75%,
+    #f9a8d4 100%
+  );
+}
+
+.animate-color-fade,
+.hover-animate-color-fade:hover {
+  background: var(--gradient-fade);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.animate-color-fade {
+  animation: color-fade 4s infinite ease-in-out;
+}
+
+.hover-animate-color-fade:hover {
+  animation: color-fade 2s infinite ease-in-out;
+}
