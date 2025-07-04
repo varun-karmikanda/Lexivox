@@ -4,7 +4,7 @@ import Translation from './Translation';
 
 export default function Information() {
 
-  const [tab,setTab] = useState(null);
+  const [tab,setTab] = useState('transcription');
 
   return (
     <main className="flex-1 p-4 flex flex-col gap-1 sm:gap-2 justify-center text-center pb-30 max-w-prose w-full mx-auto">
