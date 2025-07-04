@@ -22,11 +22,17 @@ export default function Translation(props) {
         </div>
       </div>)}
       {(textElement && !translating) && (
-        <p>{textElement}</p>
+        <div className="grid place-items-center pt-8 px-4">
+          <div className="bg-white p-6 rounded-2xl shadow-lg max-w-3xl w-full">
+            <p className="fancy-text text-md sm:text-lg md:text-xl text-center leading-relaxed break-words">
+              {textElement}
+            </p>
+          </div>
+        </div>
       )}
       {translating && (
         <div className='grid place-items-center'>
-          <i className="fa-solid fa-spinner animate-spin"></i>
+          <i className="fa-solid fa-spinner fancy-spinner"></i>
         </div>
       )}
     </div>
